@@ -1,0 +1,50 @@
+#contact-info {
+	font-size: .8em;
+}
+
+.job {
+	background: #e9e5dc;
+	border: solid;
+	padding: 15px;
+	width: 200px;
+	border-radius: 25px;
+	margin: 10px;
+}
+
+.accomplishment { 
+	font-size: .8em
+ }
+
+p::first-letter { 
+    font-size: 200%;
+    color: #e9e5dc;
+}
+
+ul > li { 
+	color: #00FF00;
+ }
+
+ /*
+1.What does the "Cascading" part of Cascading Style Sheets mean? 
+When there is a conflict between two CSS rules that select the same element, 
+how does your browser decide which rule to use?
+
+Cascading means more than one style sheet can be applied to a piece of HTML. 
+When there is a conflict between two CSS rules, the browser decides which rule to use 
+by using Specificity. 
+
+2. Find a cheat sheet or quick guide on CSS selectors, or refer to a cheat sheet 
+you've already bookmarked. What is a pseudoselector? Write a CSS rule that uses a pseudoselector.
+
+http://www.cheetyr.com/css-selectors
+http://www.w3schools.com/Css/css_pseudo_classes.asp
+Pseudo selector is the parent of the pseudo class and elements. The CSS rule is written in our code. 
+
+3. How can you use CSS to select the child element of another element (for instance, 
+a section inside another section, or an li inside a ul but not inside an ol)? Add an 
+example of such a rule in your CSS.
+
+Child combinator selector where you are able to indicate which child element you want to use CSS 
+on by using the greater than sign. The CSS rule is written in our code. 
+
+ */
