@@ -1,3 +1,30 @@
 #contact-info {
 	font-size: .8em;
 }
+
+.job {
+	background: #e9e5dc;
+	border: solid;
+	padding: 15px;
+	width: 200px;
+	border-radius: 25px;
+	margin: 10px;
+}
+
+.accomplishment { 
+	font-size: .8em
+ }
+
+ /*
+1.What does the "Cascading" part of Cascading Style Sheets mean? 
+When there is a conflict between two CSS rules that select the same element, 
+how does your browser decide which rule to use?
+
+2. Find a cheat sheet or quick guide on CSS selectors, or refer to a cheat sheet 
+you've already bookmarked. What is a pseudoselector? Write a CSS rule that uses a pseudoselector.
+
+3. How can you use CSS to select the child element of another element (for instance, 
+a section inside another section, or an li inside a ul but not inside an ol)? Add an 
+example of such a rule in your CSS.
+
+ */
