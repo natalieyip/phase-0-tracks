@@ -20,6 +20,10 @@ p::first-letter {
     color: #e9e5dc;
 }
 
+ul > li { 
+	color: #00FF00;
+ }
+
  /*
 1.What does the "Cascading" part of Cascading Style Sheets mean? 
 When there is a conflict between two CSS rules that select the same element, 
@@ -34,10 +38,13 @@ you've already bookmarked. What is a pseudoselector? Write a CSS rule that uses 
 
 http://www.cheetyr.com/css-selectors
 http://www.w3schools.com/Css/css_pseudo_classes.asp
-Pseudo selector 
+Pseudo selector is the parent of the pseudo class and elements. The CSS rule is written in our code. 
 
 3. How can you use CSS to select the child element of another element (for instance, 
 a section inside another section, or an li inside a ul but not inside an ol)? Add an 
 example of such a rule in your CSS.
+
+Child combinator selector where you are able to indicate which child element you want to use CSS 
+on by using the greater than sign. And
 
  */
