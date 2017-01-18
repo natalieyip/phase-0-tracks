@@ -45,6 +45,6 @@ a section inside another section, or an li inside a ul but not inside an ol)? Ad
 example of such a rule in your CSS.
 
 Child combinator selector where you are able to indicate which child element you want to use CSS 
-on by using the greater than sign. And
+on by using the greater than sign. The CSS rule is written in our code. 
 
  */
