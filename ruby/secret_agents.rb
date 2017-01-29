@@ -44,5 +44,5 @@ else
 	puts "Your new password is " + decrypt("#{password}")
 end
 
-
+decrypt(encrypt("swordfish"))
 #It works because the order of evaluation causes  #swordfish to encrypt first, then decrypt.
