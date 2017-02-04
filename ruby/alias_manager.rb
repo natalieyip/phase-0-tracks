@@ -2,7 +2,6 @@
 - Ask user for their name
 - Split it up and reverse the words
 
-	
 =end
 
 
@@ -60,6 +59,7 @@ end
 
 all_names.delete_if {|x,y| x == "stop"}
 all_names.each {|x, y| p "#{x} is actually #{y}" }
+
 
 
 
