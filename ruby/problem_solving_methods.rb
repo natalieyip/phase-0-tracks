@@ -22,7 +22,7 @@ p search_array(array, 31)
 p search_array(array, 20)
 
 # ***** release 1 *****
-=begin
+
 
 def fib(num)
   fib_num = [0, 1]
@@ -37,8 +37,8 @@ p fib(100)
 
 
 
-=begin
-***** release 2 *****
+#***** release 2 *****
+=begin 
 BUBBLE SORT ALGORITHM
 - Create an array.
 - Take length of array, then use loop to iterate through entire length of array.
