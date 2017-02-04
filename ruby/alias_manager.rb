@@ -1,9 +1,20 @@
 =begin
 - Ask user for their name
-- Split it up and reverse the words
-
+- Make a method to split it up and reverse their name.
+- Make a method to find and change all vowels to the next one. 
+	- Iterate through the string to locate vowels
+	- Change vowels into the next one of the vowel sequence
+	- Make sure "u" changes to "a"
+- Make a method to find and change all consonants to the next one. 
+	- Downcase all letters. 
+	- Iterate through the string to locate consonants
+	- Change consonants into the next one of the consonant sequence
+	- Make sure "z" changes to "b"
+	- Capitalize both words. 
+- Put the user's name through our newly constructed method.
+- Make an empty hash to start storing multiple users' names. 
+- Print each name out when done.
 =end
-
 
 
 def swap(name)
@@ -44,21 +55,21 @@ def consonant_change(name)
 
 end 
  
- p consonant_change("Felicia Torres")
+# p consonant_change("Felicia Torres")
 
 user_name = nil
-all_names ={}
+all_names = {}
 
-until "#{user_name}"  == "stop"
+until "#{user_name}"  == "stop" 
 	puts "Whats your name? (Type 'stop' when you want to stop.) "
 	user_name = gets.chomp
 	new_name = consonant_change("#{user_name}")
-	puts "Congrats, your name secret name is #{new_name}!"
+	puts "Congrats, your name secret agent name is #{new_name}!"
 	all_names["#{user_name}"] = new_name
 end
 
 all_names.delete_if {|x,y| x == "stop"}
-all_names.each {|x, y| p "#{x} is actually #{y}" }
+all_names.each {|x, y| p "Secret Agent #{x} reporting as #{y} for duty!" }
 
 
 
