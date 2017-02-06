@@ -13,6 +13,7 @@ Paws: 4
 Ears: 2
 
 
+
 BEHAVIOR -----------------------
 Drool
 Jump
@@ -20,3 +21,4 @@ Bark
 Runs
 Swims
 Rolls over
+Melts hearts
