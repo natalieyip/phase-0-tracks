@@ -7,8 +7,18 @@ class Santa
 
 	def initialize
 		p "Initializing Santa instance ..."
-		@gender = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-		@ethnicity = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+		@gender = [
+			"agender", "female", "bigender",
+			"male", "female", "gender fluid",
+			"N/A"
+		]
+		@ethnicity = [
+			"black", "Latino", "white", 
+			"Japanese-African", "prefer not to say", 
+			"Mystical Creature (unicorn)", "N/A", "Chinese-Canadian",
+			"Southeast Asian", "French Mexican", "Centaur", "Sphynx",
+			"Asian Brazilian", "Vietnamese-Australian", "Teo-Chew"
+		]
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", 
 		"Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		@age = 0
@@ -75,9 +85,9 @@ amount_of_santas = gets.chomp.to_i
 
 amount_of_santas.times do 
 	new_gender = santa.gender.sample
-	new_eth = santa.gender.sample
+	new_eth = santa.ethnicity.sample
 	santa.age = rand(0..140)
-	puts "Your Santa is #{new_gender}, #{new_eth}, #{santa.age}."
+	puts "Your Santa is #{new_gender}, #{new_eth}, and #{santa.age} years young."
 end 
 
 
