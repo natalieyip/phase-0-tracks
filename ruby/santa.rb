@@ -7,6 +7,8 @@ class Santa
 
 	def initialize
 		p "Initializing Santa instance ..."
+
+	#Release 1
 		@gender = [
 			"agender", "female", "bigender",
 			"male", "female", "gender fluid",
@@ -19,8 +21,11 @@ class Santa
 			"Southeast Asian", "French Mexican", "Centaur", "Sphynx",
 			"Asian Brazilian", "Vietnamese-Australian", "Teo-Chew"
 		]
-		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", 
-		"Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		@reindeer_ranking = [
+			"Rudolph", "Dasher", "Dancer", 
+			"Prancer", "Vixen", "Comet", 
+			"Cupid", "Donner", "Blitzen"
+		]
 		@age = 0
 	end 
 
@@ -32,6 +37,7 @@ class Santa
 		p "That was a good #{cookie}!"
 	end 
 
+	#Release 2
 	def celebrate_birthday
 		 @age = @age + 1 
 	end 
@@ -50,12 +56,13 @@ class Santa
 
 end 
 
-#Release 1
 santas = []
 santa = Santa.new
+
 =begin
 
 ######Driver's Code###########
+
 santas << santa
 genders = ["Gender fluid", "Male", "Transgender"]
 ethnicities = ["Japanese-Canadian", "Native American", "Vietnamese-Australian"]
@@ -63,8 +70,6 @@ genders.length.times do |idx|
 santas << Santa.new(genders[idx], ethnicities[idx])
 end
 
-
-#Release 2
 santa.celebrate_birthday
 puts "Santa turned #{santa.age} tonight!"
 santa.celebrate_birthday
