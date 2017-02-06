@@ -50,17 +50,23 @@ santas = []
 santa = Santa.new("Female", "Thai")
 =begin
 santas << santa
-
 example_genders = ["Gender fluid", "Male", "Transgender"]
 example_ethnicities = ["Japanese-Canadian", "Native American", "Vietnamese-Australian"]
 example_genders.length.times do |idx|
 santas << Santa.new(example_genders[idx], example_ethnicities[idx])
 end
 =end 
+
 p santa.age
 santa.celebrate_birthday
-p santa.age
+puts "Santa turned #{santa.age}!"
 santa.celebrate_birthday
-p santa.age
+puts "Santa turned #{santa.age}!"
+
+santa.get_mad_at = "Vixen" 
+santa.gender = "Fluid"
+puts "Santa is now #{santa.gender}" 
+santa.gender = "Transgender"
+puts "Santa is now #{santa.gender}" 
 
 
