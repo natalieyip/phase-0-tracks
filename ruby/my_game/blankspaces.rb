@@ -1,29 +1,37 @@
 
 class Blankspaces 
 
-  attr_reader :guess_count
+  attr_reader 
+  attr_accessor :secret_word, :guess_count
 	
   def initialize(secret_word)
     @secret_word = secret_word
     @guess_count = 0
   end
 
+=begin
   def blanks 
     word_being_guess = []
     secret_word.length.times { word_being_guess << "_ "}
-    word_being_guess
+    word_being_guess.join
   end 
 
-  def check_letter(letter) #parameter serves as user's guess
-  	@guess_count += 1
-  	if @secret_word.index(letter) != 
-  	
-  	else
-  		false
-  	end
-  end
-end
 
+  def guess_letter(letter)
+    if @secret_word.index(letter) != nil #got something right 
+       @word_being_guess.delete_at(secret_word.index(letter))
+       word_being_guess.insert(secret_word.index(letter), letter)
+       word_being_guess.join
+     else 
+       guess_count += 1
+    end
+  end
+
+  def last_message
+  end 
+=end 
+
+end
 
 
 #user interface 
@@ -31,14 +39,13 @@ p "User 1: Please enter secret word: "
 secret_word = gets.chomp 
 game = Blankspaces.new(secret_word)
 
-game.blanks
+word_being_guess = []
 
-=begin 
-guess_count = 0 
+secret_word.length.times { word_being_guess << "_ "}
 
-  p "User 2: Please start guessing the word."
+p "User 2: Please start guessing the word."
   
-while guess_count < secret_word.length 
+while game.guess_count < game.secret_word.length 
   user_guess = gets.chomp 
   
   if secret_word.index(user_guess) != nil #got something right 
@@ -56,9 +63,8 @@ while guess_count < secret_word.length
    else 
      
      puts "Nope try again"
-     guess_count += 1
+     game.guess_count += 1
   end 
-  
   
   
 end 
@@ -69,5 +75,5 @@ else
   puts "Darn, the word was #{secret_word}!"
 end
 
-=end 
 
+#having trouble converting my program into the class. 
