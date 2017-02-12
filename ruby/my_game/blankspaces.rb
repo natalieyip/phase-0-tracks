@@ -18,7 +18,6 @@ class Blankspaces
     if secret_word.index(letter) != nil #got something right 
        word_being_guess.delete_at(secret_word.index(letter))
        word_being_guess.insert(secret_word.index(letter), letter)
-       p word_being_guess.join #Q: When I change this to puts, output on the screen becomes "Sorry Try Again" instead of "Grats" but it still works. 
     end
   end 
 
@@ -33,13 +32,14 @@ puts "User 1: Please enter secret word: "
 secret_word = gets.chomp 
 game = Blankspaces.new(secret_word)
 
-p game.blanks 
+puts game.blanks 
 
 puts "User 2: Please start guessing the word."
   
 while game.guess_count < game.secret_word.length 
   user_guess = gets.chomp 
   if game.guess_right_letter(user_guess)
+    puts game.word_being_guess.join
     break if game.word_being_guess.join == secret_word
     puts "Great, you got one! Guess again."
   elsif game.guess_wrong_letter(user_guess)
