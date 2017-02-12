@@ -9,18 +9,16 @@ class Blankspaces
     @word_being_guess = []
   end
 
-
   def blanks 
     secret_word.length.times { word_being_guess << "_ "}
     word_being_guess.join
   end 
 
-
   def guess_right_letter(letter)
     if @secret_word.index(letter) != nil #got something right 
        @word_being_guess.delete_at(@secret_word.index(letter))
        @word_being_guess.insert(@secret_word.index(letter), letter)
-       p @word_being_guess.join
+       p @word_being_guess.join #Q: When I change this to puts, output on the screen becomes "Sorry Try Again" instead of "Grats" but it still works. 
     end
   end 
 
