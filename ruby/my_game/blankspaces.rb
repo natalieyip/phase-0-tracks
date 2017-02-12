@@ -15,19 +15,18 @@ class Blankspaces
   end 
 
   def guess_right_letter(letter)
-    if @secret_word.index(letter) != nil #got something right 
-       @word_being_guess.delete_at(@secret_word.index(letter))
-       @word_being_guess.insert(@secret_word.index(letter), letter)
-       p @word_being_guess.join #Q: When I change this to puts, output on the screen becomes "Sorry Try Again" instead of "Grats" but it still works. 
+    if secret_word.index(letter) != nil #got something right 
+       word_being_guess.delete_at(secret_word.index(letter))
+       word_being_guess.insert(secret_word.index(letter), letter)
+       p word_being_guess.join #Q: When I change this to puts, output on the screen becomes "Sorry Try Again" instead of "Grats" but it still works. 
     end
   end 
 
   def guess_wrong_letter(letter)
-    @guess_count += 1 
+    @guess_count += 1 #Q Why do we need a @ for this variable and not others in the other methods?
   end 
 
 end
-
 
 #user interface 
 puts "User 1: Please enter secret word: "
@@ -40,7 +39,6 @@ puts "User 2: Please start guessing the word."
   
 while game.guess_count < game.secret_word.length 
   user_guess = gets.chomp 
-
   if game.guess_right_letter(user_guess)
     break if game.word_being_guess.join == secret_word
     puts "Great, you got one! Guess again."
