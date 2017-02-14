@@ -5,7 +5,7 @@ PSEUDOCODE
 - Iterate through each letter of the string argument
 - With a for loop, we can increment counting down starting from the last letter
 - Push or add each new letter to the empty array  
-- Return the variable and used a join method to return the string
+- Return the variable and use a join method to return the string
 
 */
 
