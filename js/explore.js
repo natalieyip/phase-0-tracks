@@ -17,4 +17,13 @@ function reverse(string) {
    return reverseString.join("");
 } 
 
-console.log(reverse("hello"))
+// DRIVER CODE 
+
+console.log(reverse("Sit on a potato pan, Otees?"))
+
+if (1 != 5) {
+	console.log(reverse("desserts"))
+}
+else {
+	console.log("That's not true!")
+}
