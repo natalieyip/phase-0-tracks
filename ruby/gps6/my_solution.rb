@@ -1,12 +1,12 @@
 # Virus Predictor
 
 # I worked on this challenge [by myself, with: Grace Noh].
-# We spent [] hours on this challenge.
+# We spent 2-2.5 hours on this challenge.
 
 # EXPLANATION OF require_relative
-# pulls in a file from anywhere in your computer; 
+# Require_relative pulls in a file from anywhere in your local hardware ; 
 # if no start point specified, looks in the same file you are in currently. 
-# require looks within Ruby; otherwise, it starts in C
+
 
 require_relative 'state_data'
 
@@ -103,11 +103,18 @@ end
 # One of the hashes is using strings with a hashrocket while the nested hashes are using symbol data types. 
 
 # What does require_relative do? How is it different from require?
-# Require_relative allows 
+# Require_relative allows you to load up a file that is relative to your current path/directory whereas require 
+# pulls from global Ruby scope; otherwise, it starts in C. 
 
 #  What are some ways to iterate through a hash?
-# You can iterate through a hash with some built in methods such as .each or .times. We would just need to make sure we have two parameters.
+# You can iterate through a hash with some built in methods such as .each or .times. We would just need to 
+# ensure we have two parameters for key and values.
 
 # When refactoring virus_effects, what stood out to you about the variables, if anything?
+# I noticed that the parameters were the same, but it didnt take until looking at the other two methods to understand 
+# that the parameters were unneccessary. 
 
 # What concept did you most solidify in this challenge?
+# I really enjoyed playing around with iterating through the hash and dealing with nested data structures. I 
+# think being able to see the two versions (ours compared to the original input) really helped me understand 
+# iteration and accessing nested hashes better. 
