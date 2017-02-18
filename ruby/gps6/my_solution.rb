@@ -1,11 +1,11 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: Natalie Yip].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [by myself, with: Grace Noh].
+# We spent [] hours on this challenge.
 
 # EXPLANATION OF require_relative
 # pulls in a file from anywhere in your computer; 
-# if no start point specified, looks in the same file you are in currently
+# if no start point specified, looks in the same file you are in currently. 
 # require looks within Ruby; otherwise, it starts in C
 
 require_relative 'state_data'
@@ -52,32 +52,19 @@ class VirusPredictor
   def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
-    speed = 0.0
-    # case statement in Ruby 
-    case @population_density
-      when 200..
-        speed = 0.5
-      when 150...200
-        speed = 1
-      when 100...150
-        speed = 1.5
-      when 50...100
-        speed = 2
-      else 
-        speed = 2.5
-    end 
+    speed = case @population_density
 
-    # if @population_density >= 200
-    #   speed += 0.5
-    # elsif @population_density >= 150
-    #   speed += 1
-    # elsif @population_density >= 100
-    #   speed += 1.5
-    # elsif @population_density >= 50
-    #   speed += 2
-    # else
-    #   speed += 2.5
-    # end
+      when 200..999
+        0.5
+      when 150...200
+        1.0
+      when 100...150
+        1.5
+      when 50...100
+        2.0 
+      else 
+        2.5
+    end 
 
     puts " and will spread across the state in #{speed} months.\n\n"
 
@@ -110,4 +97,17 @@ end
 
 
 #=======================================================================
-# Reflection Section
+# # Reflection Section
+
+#  What are the differences between the two different hash syntaxes shown in the state_data file?
+# One of the hashes is using strings with a hashrocket while the nested hashes are using symbol data types. 
+
+# What does require_relative do? How is it different from require?
+# Require_relative allows 
+
+#  What are some ways to iterate through a hash?
+# You can iterate through a hash with some built in methods such as .each or .times. We would just need to make sure we have two parameters.
+
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+
+# What concept did you most solidify in this challenge?
