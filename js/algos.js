@@ -7,14 +7,31 @@
 - Return phrase 
 */
 
-function findLongest(array) { 
-	var longestPhrase = array[0]
-	for (var i = 0; i < array.length; i++) { 
-		if (longestPhrase.length < array[i].length) { 
-			longestPhrase = array[i]
-		}
+// function findLongest(array) { 
+// 	var longestPhrase = array[0]
+// 	for (var i = 0; i < array.length; i++) { 
+// 		if (longestPhrase.length < array[i].length) { 
+// 			longestPhrase = array[i]
+// 		}
+// 	}
+// 	return longestPhrase; 
+// }
+
+// console.log(findLongest(["long phrase","longest phrase","longer phrase"]))
+
+/* Release 1: Find a Key-Value Match
+
+*/ 
+
+function key_value_match(obj, obj2) { 
+	for (var key in obj) { 
+		if (obj[key] == obj2[key]) { 
+			return true;
+		} 
 	}
-	return longestPhrase; 
+	return false
 }
 
-console.log(findLongest(["long phrase","longest phrase","longer phrase"]))
+console.log(key_value_match({name: "Steven", age: 54}, {name: "Tamir", age: 54} ))
+console.log(key_value_match({dessert: "Cake", flavor: "Strawberry"}, {dessert: "Ice Cream", flavor: "Chocolate"}))
+console.log(key_value_match({species: "Pokemon", type: "Leaf"}, {species: "Pokemon", type: "Normal"}))
