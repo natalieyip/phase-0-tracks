@@ -1,0 +1,23 @@
+RELEASE 2
+
+#2
+
+SELECT * FROM reviews JOIN users ON users.id = reviews.user_id JOIN businesses ON businesses.id = reviews.business_id;
+
+1|2|THIS BLOWS|1|1|1|Bradford|Pitt|1|Grundy Hollow Wedding Chapel
+2|5|THIS rockS|2|2|2|Holly|Berry|2|Lotus Yoga
+3|4.5|Delicious! BEST SUSHI EVARRRR|3|3|3|Denzel|George|3|Sushi World
+
+#3
+
+SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM users JOIN businesses ON businesses.id = users.id JOIN reviews ON reviews.business_id = businesses.id;
+
+Bradford|Pitt|Grundy Hollow Wedding Chapel|2|THIS BLOWS
+Holly|Berry|Lotus Yoga|5|THIS rockS
+Denzel|George|Sushi World|4.5|Delicious! BEST SUSHI EVARRRR
+
+#4 
+
+SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM users JOIN businesses ON businesses.id = users.id JOIN reviews ON reviews.business_id = businesses.id WHERE business_id = 3;
+
+Denzel|George|Sushi World|4.5|Delicious! BEST SUSHI EVARRRR
