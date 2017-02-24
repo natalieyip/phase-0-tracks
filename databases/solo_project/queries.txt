@@ -1,0 +1,80 @@
+#1 
+SELECT * FROM characters ; 
+
+1|Woody|3|false|1
+2|Snow White|2|false|2
+3|Dug|1|true|1
+4|Squirt|2|true|1
+5|Joy|1|false|1
+6|Simba|3|true|2
+7|Mulan|2|false|2
+8|Shrek|4|false|3
+9|Toothless|2|true|3
+
+#2
+UPDATE characters SET number_of_movies=1 WHERE name="Snow White";
+
+#3 
+SELECT * FROM characters, company WHERE characters.company = company.id;
+
+1|Woody|3|false|1|1|Pixar|
+2|Snow White|1|false|2|2|Disney|
+3|Dug|1|true|1|1|Pixar|
+4|Squirt|2|true|1|1|Pixar|
+5|Joy|1|false|1|1|Pixar|
+6|Simba|3|true|2|2|Disney|
+7|Mulan|2|false|2|2|Disney|
+8|Shrek|4|false|3|3|Dreamworks|
+9|Toothless|2|true|3|3|Dreamworks|
+
+
+#4 
+SELECT characters.name,company.name FROM characters JOIN company ON characters.company = company.id;
+
+Woody|Pixar
+Snow White|Disney
+Dug|Pixar
+Squirt|Pixar
+Joy|Pixar
+Simba|Disney
+Mulan|Disney
+Shrek|Dreamworks
+Toothless|Dreamworks
+
+#5
+DELETE FROM company WHERE name = 'Woody';
+
+#6 
+
+SELECT characters.name, characters.animal, characters.company FROM characters LEFT JOIN company ON characters.company = company.id; 
+
+Woody|false|1
+Snow White|false|2
+Dug|true|1
+Squirt|true|1
+Joy|false|1
+Simba|true|2
+Mulan|false|2
+Shrek|false|3
+
+SELECT characters.name, characters.company FROM characters INNER JOIN company ON characters.company = company.id;
+
+Woody|1
+Snow White|2
+Dug|1
+Squirt|1
+Joy|1
+Simba|2
+Mulan|2
+Shrek|3
+
+SELECT characters.name, company.name FROM characters INNER JOIN company ON characters.company = company.id;
+
+Woody|Pixar
+Snow White|Disney
+Dug|Pixar
+Squirt|Pixar
+Joy|Pixar
+Simba|Disney
+Mulan|Disney
+Shrek|Dreamworks
