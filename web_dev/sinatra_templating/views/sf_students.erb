@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>San Francisco Students</title>
+</head>
+<body>
+	<p> Here is a list of all the students from San Francisco: </p>
+	<ol>
+	<% @campus.each do |student| %>
+	<li> <%= student['name'] %>, <%= student['age'] %> 
+	</li>
+	<% end %>   
+	</ol>
+</body>
+</html>
